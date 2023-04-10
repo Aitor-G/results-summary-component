@@ -11960,8 +11960,8 @@ body {
   color: hsl(0, 0%, 80%);
 }
 .score__result {
-  height: 20vh;
-  width: 20vh;
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
   background: linear-gradient(to top, hsla(241, 72%, 46%, 0), hsl(256, 72%, 46%));
   display: flex;
