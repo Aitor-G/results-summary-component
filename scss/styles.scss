@@ -1,0 +1,155 @@
+@use '../node_modules/bootstrap/scss/bootstrap.scss';
+@use 'mixins' as *;
+@use 'variables' as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  width: 100%;
+  height: 100vh;
+  @include desktopCenter;
+}
+
+.container-fluid {
+  @include desktopCenter;
+}
+
+.component {
+  box-shadow: 1rem 1rem 3rem $pale-blue;
+  border-radius: 2rem;
+  @include desktopWidth;
+
+}
+
+.score {
+  background: linear-gradient(to top, $blue, $purple);
+  text-align: center;
+  border-radius: 2rem;
+  @include columCenter;
+  @include smRounded;
+
+  &__header {
+    margin: 1.8rem 0;
+    font-size: 1.1rem;
+    font-weight: $semi;
+    color: $gray;
+  }
+
+  &__result {
+    height: 20vh;
+    width: 20vh;
+    border-radius: 50%;
+    background: linear-gradient(to top, $persian-blue, $purple-blue);
+    @include columCenter;
+
+    &-global {
+      margin-top: 1.4rem;
+      font-size: 4rem;
+      font-weight: $bold;
+      color: $white;
+    }
+
+    &-percent {
+      margin-top: -0.7rem;
+      font-weight: $semi;
+      color: $dark-gray;
+    }
+  }
+
+  &__footer {
+    width: 80%;
+
+    &-title {
+      margin-top: 1.5rem;
+      color: $white;
+      font-weight: $semi;
+    }
+
+    &-text {
+      color: $gray;
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+.summary {
+  @include columCenter;
+
+  &__title {
+    width: 90%;
+    margin: 2rem 0 1.2rem 1.2rem;
+    font-size: 1.2rem;
+    font-weight: $semi;
+    color: $dark-bluegray;
+    text-align: left
+  }
+
+  &__section {
+    @include rowBetween;
+    width: 90%;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+
+    &-heading {
+      display: flex;
+
+      &--title {
+        margin-left: 1rem;
+        font-weight: $bold;
+      }
+    }
+
+    &-score {
+      font-weight: $semi;
+      color: $dark-gray;
+
+      &__final {
+        color: $dark-bluegray;
+        font-weight: $bold;
+      }
+    }
+
+  }
+
+
+}
+
+.reaction {
+  background-color: rgba($red, 0.1);
+  color: $red;
+}
+
+.memory {
+  background-color: rgba($orange, 0.1);
+  color: $orange;
+}
+
+.verbal {
+  background-color: rgba($green, 0.1);
+  color: $green;
+}
+
+.visual {
+  background-color: rgba($dark-blue, 0.1);
+  color: $blue;
+}
+
+.button {
+  margin-top: 0.5rem;
+  background-color: $dark-bluegray;
+  color: $blue;
+
+  .summary__button {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: $semi;
+    color: $white;
+  }
+}

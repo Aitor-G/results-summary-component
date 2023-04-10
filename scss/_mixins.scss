@@ -1,0 +1,45 @@
+@mixin columCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin columTop {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+@mixin rowCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin rowBetween {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin smRounded {
+  @media screen and (max-width: 768px) {
+    border-radius: 0 0 2rem 2rem;
+  }
+}
+
+@mixin desktopCenter {
+  @media screen and (min-width: 768px) {
+    @include columCenter;
+  }
+}
+
+@mixin desktopWidth {
+  @media screen and (min-width: 768px) {
+    max-width: 80%;
+  }
+}
