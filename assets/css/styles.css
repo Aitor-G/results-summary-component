@@ -11940,13 +11940,13 @@ body {
 }
 
 .score {
-  background: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
   text-align: center;
   border-radius: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
 }
 @media screen and (max-width: 768px) {
   .score {
@@ -12064,6 +12064,9 @@ body {
   text-decoration: none;
   font-weight: 700;
   color: hsl(0, 0%, 100%);
+}
+.button:hover {
+  background: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
 }
 
 /*# sourceMappingURL=styles.css.map */
